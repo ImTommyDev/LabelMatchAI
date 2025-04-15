@@ -55,9 +55,9 @@ resnet.eval()  # Pongo el modelo en modo "evaluación", no entrenamiento
 # ========================================
 
 # Aquí especifico las imágenes:
-imagen_grande = 'Image/etiqueta_foto.jpg'         # Esta es la imagen que contiene la etiqueta incrustada en un entorno
-imagen_base = 'Image/etiqueta_base_h.jpg'         # Esta es la imagen buena, la que uso como plantilla
-imagen_recortada = 'Image/etiqueta_recortada.jpg' # Aquí voy a guardar el recorte detectado
+imagen_grande = 'Imagenes_prueba/etiqueta_foto.jpg'         # Esta es la imagen que contiene la etiqueta incrustada en un entorno
+imagen_base = 'Imagenes_modelo/etiqueta_base_h.jpg'         # Esta es la imagen buena, la que uso como plantilla
+imagen_recortada = 'Imagenes_recorte/etiqueta_recortada.jpg' # Aquí voy a guardar el recorte detectado
 
 # Llamo a la función de recorte para buscar y extraer la etiqueta automáticamente
 recortar_por_template(imagen_grande, imagen_base, guardar_como=imagen_recortada)

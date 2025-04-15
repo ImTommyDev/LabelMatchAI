@@ -1,0 +1,27 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                    ResNet50 está "ya entrenado con millones de imágenes"
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Cuando se dice que ResNet50 está "ya entrenado con millones de imágenes", se refiere a que el modelo fue previamente entrenado por otros 
+(por ejemplo, por investigadores de Microsoft o PyTorch) usando un conjunto de datos muy grande y general llamado ImageNet.
+
+¿Qué es ImageNet?
+ImageNet es un conjunto de datos con más de 14 millones de imágenes.
+
+Estas imágenes están etiquetadas con más de 20 mil categorías diferentes (por ejemplo: perro, avión, flor, etc.).
+
+El modelo ResNet50 ha aprendido a reconocer patrones y características comunes en estas imágenes (bordes, texturas, formas, objetos, etc.).
+
+¿Qué significa esto para ti?
+Cuando tú cargas resnet50(pretrained=True), estás:
+
+Usando un modelo que ya sabe "ver" bien imágenes, gracias al entrenamiento previo con ImageNet.
+
+Aunque no ha visto tus imágenes específicas, el modelo extrae características generales muy útiles que también se aplican a otras imágenes fuera de ImageNet.
+
+¿Por qué eliminar la última capa?
+La última capa de ResNet50 está diseñada para clasificar en las 1.000 clases de ImageNet, que probablemente no coincidan con tus clases o tareas.
+
+Al quitarla, te quedas con lo más valioso: el vector de características (también llamado "embedding" o "feature vector") que representa la imagen en forma numérica, 
+como un resumen de lo que ve el modelo.
+
